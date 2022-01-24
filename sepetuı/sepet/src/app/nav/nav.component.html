@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home" routerLinkActive="router-link-active">Ana Sayfa</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link " routerLink="Product" routerLinkActive="active">Ürünler
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="productpost" routerLinkActive="active">Ürün ekle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="user" routerLinkActive="active">Kullanıcı</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="productupdate" routerLinkActive="active">ürünleri güncelle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="sepet" routerLinkActive="active">sepet</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" routerLinkActive="active">Kullanıcı giriş</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register" routerLinkActive="active">Kayıt ol</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="sepet2" routerLinkActive="active">sepet 2</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">Kategori</a>
+          <div class="example-wrapper">
+            <kendo-autocomplete [data]="listItems" placeholder="Araba" class="countries">
+            </kendo-autocomplete>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</nav>

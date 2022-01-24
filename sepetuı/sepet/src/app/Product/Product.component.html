@@ -1,0 +1,74 @@
+<kendo-grid [data]="product" [kendoGridBinding]="product" [height]="400" (excelExport)="onExcelExport($event)">
+
+  <ng-template kendoGridToolbarTemplate>
+    <button type="button" kendoGridExcelCommand icon="file-excel">
+      Excel
+    </button>
+  </ng-template>
+  <kendo-grid-column field="productId" [locked]="false" title="Ürün no" [width]="100"></kendo-grid-column>
+  <kendo-grid-column field="productName" title="Ürün Adı" [width]="100"> </kendo-grid-column>
+  <kendo-grid-column field="price" title="Fiyat" [width]="100"> </kendo-grid-column>
+  <kendo-grid-column field="stock" title="stok" [width]="100"> </kendo-grid-column>
+  <kendo-grid-column title="Sil" [width]="100">
+ 
+    <kendo-grid-excel fileName="products.xlsx"></kendo-grid-excel>
+    <ng-template kendoGridCellTemplate let-product>
+      <button style="background-color: rgb(247, 86, 11);" class="k-button"
+        (click)="delete(product.productId)">X</button>
+    </ng-template>
+    
+  </kendo-grid-column>
+  <kendo-grid-column title="Ekle" [width]="100">
+   <ng-template kendoGridCellTemplate let-product>
+      <button style="background-color: rgb(11, 33, 236);" class="k-button"
+        (click)="Add(product)">+</button>
+    </ng-template> </kendo-grid-column>
+ 
+    <!-- <kendo-grid-column title="Çıkar" [width]="100">
+      <ng-template kendoGridCellTemplate let-product>
+         <button style="background-color: rgb(37, 231, 63);" class="k-button"
+           (click)="remove(product)">-</button>
+       </ng-template> </kendo-grid-column> 
+</kendo-grid>
+ <div style="width: 100px;">Sepetteki Ürün Sayısı : {{sepetcount}}
+  <ul class="list-group" *ngFor="let sepet of sepetlist">
+    <li class="list-group-item">{{sepet.product.productName}} -
+      <span class="black">{{sepet.quantity}}</span>
+    </li>
+  </ul>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div *ngFor="let products of product" class="col-md-6">
+      <h2 class="mt-5 pt-3">{{products.ProductName}}</h2>
+      <div class="card shadow-sm">
+       
+        <div class="card-body">
+          <p class="card-text">Fiyat :{{products.Stock}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <div>
+
+              </div>
+              <button type="button" (click)="delete(products.ProductId)" class="btn btn-sm btn-outline-secondary">sil</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  -->

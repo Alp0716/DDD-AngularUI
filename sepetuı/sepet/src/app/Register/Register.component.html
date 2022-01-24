@@ -1,0 +1,44 @@
+<h2>Kullanıcı kayıt</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="userId">kullanıcı no</label>
+    <input type="id" formControlName="userId" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f['userId'].errors }" />
+    <div *ngIf="submitted && f['userId'].errors" class="invalid-feedback">
+      <div *ngIf="f['userId'].errors['required']"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" formControlName="lastName" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
+    <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+      <div *ngIf="f['lastName'].errors['required']">Last Name is required</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="userName">User Name</label>
+    <input type="text" formControlName="userName" class="form-control"
+      [ngClass]="{ 'is-invalid': ['submitted'] && f['username'] }" />
+    <div *ngIf="submitted && f['username']" class="invalid-feedback">
+      <div *ngIf="f['username'].errors['required']">isim</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" class="form-control"
+      [ngClass]="{ 'is-invalid': ['submitted'] && f['password'] }" />
+    <div *ngIf="submitted && f['password']" class="invalid-feedback">
+      <div *ngIf="f['password'].errors">şifre gerekli</div>
+
+    </div>
+  </div>
+  <div class="form-group">
+    <button [disabled]="loading" class="btn btn-primary">
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+      kayıt ol
+
+    </button>
+
+  </div>
+</form>

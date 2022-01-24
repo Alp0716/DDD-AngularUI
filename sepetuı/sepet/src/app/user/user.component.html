@@ -1,0 +1,10 @@
+<kendo-grid [data]="user" [kendoGridBinding]="user" [height]="400">
+  <kendo-grid-column field="userId" [locked]="false" title="numara" [width]="200"></kendo-grid-column>
+  <kendo-grid-column field="userName" title="Ad "> </kendo-grid-column>
+  <kendo-grid-column field="lastName" title="Soyad"> </kendo-grid-column>
+  <kendo-grid-column title="Sil" [width]="150">
+    <ng-template kendoGridCellTemplate let-user>
+      <button style="background-color: rgb(73, 19, 221);" class="k-button" (click)="delete1(user.userId)">X</button>
+    </ng-template>
+  </kendo-grid-column>
+</kendo-grid>

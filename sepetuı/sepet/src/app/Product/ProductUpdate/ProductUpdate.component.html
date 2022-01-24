@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="text-left text-muted mb-3">Ürünü Güncelle</h3>
+      <hr>
+      <form [formGroup]="editForm" class="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="productId" formControlName="productId" name="productId" placeholder="numara">
+            <label>name</label>
+            <input type="text" class="form-control" id="productName" formControlName="productName" name="productName" placeholder="ürün adı">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="Stock">stock</label>
+            <input type="text" class="form-control" id="Stock" formControlName="Stock" name="Stock" placeholder="Stok">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="price">fiyat</label>
+            <input type="text" class="form-control" id="fiyat" formControlName="price" name="price" placeholder="fiyat">
+          </div>
+        </div>
+        <button type="submit" (click)="update()" class="btn btn-outline-primary" >Güncelle</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<main role="main">
+  <div class="container">
+    <div class="">
+      <form [formGroup]="productPostform" class="">
+        <div class="form-group">
+          <input type="text" id="productId" formControlName="productId" class="form-control" placeholder="product Id"
+            autofocus>
+          <span class="help-block">
+            
+          </span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="ProductName" formControlName="ProductName" class="form-control" placeholder="ürün adı"
+            autofocus>
+          <span class="help-block">
+          </span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="Stock" formControlName="Stock" class="form-control" placeholder="Stok Adet" autofocus>
+          <span class="help-block">
+          </span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="price" formControlName="price" class="form-control" placeholder="fiyat" autofocus>
+          <span class="help-block">
+          </span>
+        </div>
+        <input type="submit" (click)="Add()" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+  
+</main>

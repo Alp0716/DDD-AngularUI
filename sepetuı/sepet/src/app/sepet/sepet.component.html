@@ -1,0 +1,24 @@
+<div class="container ">
+  <div class="row mt-5">
+    <div class="col-4">
+      <div class="card text-white bg-danger  mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Sepetteki Ürün Sayısı : {{sepetcount}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="row " *ngFor="let sepet of sepetlist">
+        <div class="col-6">
+          <ul class="list-group mt-2">
+            <button style="background-color: rgb(37, 231, 63);" class="k-button" (click)="delete(sepet)">sil</button>
+            <li class="list-group-item">{{sepet.product.productName}} -
+              <span class="black">{{sepet.quantity}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6"><span class="red">Toplam fiyat:{{sepet.product.price}}</span></div>
+      </div>
+    </div>
+  </div>
+</div>
